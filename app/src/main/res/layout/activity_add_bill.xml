@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.AddBillActivity">
+
+    <TextView
+        android:id="@+id/title_bill"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:text="Add Bill"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:id="@+id/ll_data"
+        android:layout_below="@id/title_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/et_namaMember"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="@drawable/edit_text_outlined"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                tools:text="Nama gue"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="0.3">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/note"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/black"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingVertical="10dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbMakanan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_choose_makanan"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+            <RadioButton
+                android:id="@+id/rbMinuman"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_choose_minuman"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_labelMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:hint="@string/label_hint_input_makanan"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textSize="14sp"
+            tools:text="Nama Makanan / Minuman"
+            android:background="@drawable/edit_text_outlined"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/etHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:maxLength="7"
+            android:hint="@string/label_harga"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textSize="14sp"
+            tools:text="Harga"
+            android:background="@drawable/edit_text_outlined"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/etqty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingEnd="15dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/label_qty"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textSize="14sp"
+            android:background="@drawable/edit_text_outlined"
+            android:maxLines="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <Button
+                android:id="@+id/btAddFoods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_rounded_grey"
+                android:backgroundTint="@color/blue_500"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:minWidth="130dp"
+                android:text="Add Bill"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_layout_foods"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/btSimpan"
+        android:layout_below="@id/ll_data"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btSimpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/badge_rounded_grey"
+        android:backgroundTint="@color/blue_500"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Simpan"
+        android:layout_alignParentBottom="true"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+
+</RelativeLayout>

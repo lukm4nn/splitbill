@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailBillPersonalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_default"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Nama Gue"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                    android:textStyle="bold"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_list_menu"/>
+                <LinearLayout
+                    android:id="@+id/lyt_total_disc"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Diskon"
+                        android:textColor="@color/color_black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dotted"
+                        android:backgroundTint="@color/color_grey_01"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/tv_total_disc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_total_ongkir"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Ongkos Kirim"
+                        android:textColor="@color/color_black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dotted"
+                        android:backgroundTint="@color/color_grey_01"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/tv_total_ongkir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_total_disc_ongkir"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Diskon Ongkir"
+                        android:textColor="@color/color_black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dotted"
+                        android:backgroundTint="@color/color_grey_01"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/tv_total_disc_ongkir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lyt_pajak"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PPN"
+                        android:textColor="@color/color_black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dotted"
+                        android:backgroundTint="@color/color_grey_01"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/tv_ppn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="bottom"
+                    android:layout_height="5dp"
+                    android:background="@drawable/dotted"
+                    android:backgroundTint="@color/color_grey_01"
+                    android:layerType="software" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_total_bayar"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Bayar"
+                        android:textColor="@color/color_black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dotted"
+                        android:backgroundTint="@color/color_grey_01"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/tv_total_bayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_rounded_grey"
+                    android:backgroundTint="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false"
+                    android:text="Send Bill"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_rounded_grey"
+                    android:backgroundTint="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false"
+                    android:text="Copy"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

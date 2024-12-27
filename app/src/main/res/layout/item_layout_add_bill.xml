@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Add Bill"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:text="Nama Gue"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Makanan"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Minuman"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textSize="14sp"
+            tools:text="Nama Makanan / Minuman"
+            android:background="@drawable/edit_text_outlined"
+            android:maxLines="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textSize="14sp"
+            tools:text="Harga"
+            android:background="@drawable/edit_text_outlined"
+            android:maxLines="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="Cancel"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Simpan"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_10sdp"
+    tools:context=".ui.AddMemberSplitFragment">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/badge_rounded_grey"
+        android:backgroundTint="@color/blue_500"
+        android:text="Tambah Member"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="atau Tambah dari daftar Member"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grey_500"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outlined"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:hint="Cari Member"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"
+        android:textColor="@color/black"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_member"/>
+
+</LinearLayout>

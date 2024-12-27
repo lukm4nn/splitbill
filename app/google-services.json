@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "206299810522",
+    "project_id": "split-bill-f95fe",
+    "storage_bucket": "split-bill-f95fe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206299810522:android:cb83700775ef77ef5673e3",
+        "android_client_info": {
+          "package_name": "com.qti.splitbill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206299810522-0vj24npvsaqg4tdra3khevgtj4vvntp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qti.splitbill",
+            "certificate_hash": "ada2a2aa1660a1c779a0d2bda8d99ac581be84c0"
+          }
+        },
+        {
+          "client_id": "206299810522-kujfblcqpq25i3e9r7mcr8jo6us4grcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASSv4a53u_pJfH67C7lmHzMCbcEhSRTsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206299810522-kujfblcqpq25i3e9r7mcr8jo6us4grcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

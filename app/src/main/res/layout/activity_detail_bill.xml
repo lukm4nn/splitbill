@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailBillActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/lyt_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_default"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:text="Nama Resto"/>
+                        <EditText
+                            android:id="@+id/et_title_split"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:background="@drawable/edit_text_outlined"
+                            android:hint="Waroeng Goreng"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:text="Total Tagihan"/>
+                        <EditText
+                            android:id="@+id/et_total_split"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="8"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:background="@drawable/edit_text_outlined"
+                            android:hint="150000"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btAddMemberSplit"
+                        android:background="@drawable/badge_rounded_grey"
+                        android:backgroundTint="@color/blue_500"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tambah Daftar Pembayran"
+                        android:layout_marginTop="15dp"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMemberSplitBill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_layout_bills"/>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_state_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="3"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cbDiscount"
+                            android:layout_width="0dp"
+                            android:checked="true"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Diskon"/>
+                        <CheckBox
+                            android:id="@+id/cbPajak"
+                            android:layout_width="0dp"
+                            android:checked="true"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pajak"/>
+                        <CheckBox
+                            android:id="@+id/cbOngkir"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_weight="1"
+                            android:text="Ongkir"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:text="Total Diskon"/>
+                        <EditText
+                            android:id="@+id/etDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:background="@drawable/edit_text_outlined"
+                            android:hint="14650"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_pajak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:text="Tax / Pajak"/>
+                        <EditText
+                            android:id="@+id/et_pajak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:background="@drawable/edit_text_outlined"
+                            android:hint="14650"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_ongkir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:text="Total Ongkir"/>
+                        <EditText
+                            android:id="@+id/et_ongkir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                            android:background="@drawable/edit_text_outlined"
+                            android:hint="15000"/>
+
+                        <CheckBox
+                            android:id="@+id/cbDiscountOngkir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:text="Diskon Ongkir"/>
+                        <LinearLayout
+                            android:id="@+id/lyt_disc_ongkir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:text="Total Diskon Ongkir"/>
+                            <EditText
+                                android:id="@+id/etDiscountOngkir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:inputType="number"
+                                android:maxLength="7"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_condensed_variable_font_wght"
+                                android:background="@drawable/edit_text_outlined"
+                                android:hint="3000"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--button-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:weightSum="2"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btHitung"
+                            android:layout_width="0dp"
+                            android:background="@drawable/badge_rounded_grey"
+                            android:backgroundTint="@color/blue_500"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="Hitung"/>
+
+                        <Button
+                            android:id="@+id/btSimpan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/badge_rounded_grey"
+                            android:backgroundTint="@color/blue_500"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="Simpan"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

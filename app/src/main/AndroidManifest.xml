@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_splitbill"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_rounded_splitbill"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NoactionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.ActivityPairingSplit"
+            android:exported="false" />
+        <activity
+            android:name=".ui.PreviewListBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.PreviewMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DetailBillPersonalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DetailHistoryActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DetailBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AddBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.appinvite.automatic_client_id_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.gms.appinvite.app_id"
+            android:value="@string/APP_ID" />
+        <meta-data
+            android:name="com.google.android.gms.signin.default_web_client_id"
+            android:value="@string/WEB_TOKEN_CLIENT_ID" />
+
+    </application>
+
+</manifest>

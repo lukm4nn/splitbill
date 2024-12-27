@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/task_svgrepo_com"
+        app:showAsAction="always"
+        android:id="@+id/split_activie"
+        android:title="New" />
+
+    <item
+        android:icon="@drawable/history_list_svgrepo_com"
+        app:showAsAction="always"
+        android:id="@+id/split_history"
+        android:title="History" />
+
+    <item
+        android:icon="@drawable/ic_setting"
+        app:showAsAction="always"
+        android:id="@+id/setting"
+        android:title="History" />
+
+</menu>

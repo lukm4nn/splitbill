@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_condensed_variable_font_wght"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Tambah Member Split Bill"
+            android:textSize="@dimen/_12sdp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        android:text="No Whatsapp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outlined"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/hint_no_whatsapp"
+        android:inputType="number"
+        android:maxLength="13"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_outlined"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/hint_input_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/badge_rounded_grey"
+        android:backgroundTint="@color/blue_500"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_condensed_variable_font_wght"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_60sdp"
+        android:layout_gravity="center_horizontal"/>
+
+
+
+
+</LinearLayout>

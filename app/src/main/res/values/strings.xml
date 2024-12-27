@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SplitBill</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_makanan">Item makanan / Minuman</string>
+    <!--    <string name="label_makanan">Item makanan &amp; Minuman</string>-->
+    <string name="label_hint_input_makanan">Masukan Nama Makanan / Minuman</string>
+    <string name="label_hint_input_nama">etc... atas nama Jhone Chage</string>
+    <string name="label_harga">Harga</string>
+    <string name="label_qty">QTY</string>
+    <string name="label_choose_makanan">Makanan</string>
+    <string name="label_choose_minuman">Minuman</string>
+    <string name="label_harga_satuan">\@ 10000</string>
+    <string name="label_ongkir_pajak_discount">Harga sudah termasuk ongkir, discount dan pajak</string>
+    <string name="label_pajak_discount">Harga sudah termasuk discount dan pajak</string>
+    <string name="label_account">Account Name</string>
+    <string name="label_email">Account Email</string>
+    <string name="hint_no_whatsapp">Masukan No Whatsapp</string>
+    <string name="hint_input_name">Masukan Nama</string>
+    <string name="ANDROID_TOKEN_CLIENT_ID">206299810522-0vj24npvsaqg4tdra3khevgtj4vvntp1.apps.googleusercontent.com</string>
+    <string name="WEB_TOKEN_CLIENT_ID">206299810522-kujfblcqpq25i3e9r7mcr8jo6us4grcu.apps.googleusercontent.com</string>
+    <string name="APP_ID">1:206299810522:android:cb83700775ef77ef5673e3</string>
+
+</resources>

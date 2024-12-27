@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/green_400">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+
+        <TextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Home"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:padding="7dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_setting"
+            app:tint="@color/color_white" />
+
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
