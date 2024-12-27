@@ -30,11 +30,7 @@ class AdapterFoods (
     override fun onBindViewHolder(holder: HolderFoods, position: Int) {
         var item: Foods = item_list.get(position)
 
-        if (item.isFood){
-            holder.binding.tvLabel.text = "Makanan"
-        }else{
-            holder.binding.tvLabel.text = "Minuman"
-        }
+        holder.binding.tvLabel.text = "Pesanan"
         holder.binding.tvFood.setText("${item.qty} ${item.nama_foods}")
         holder.binding.tvHargaSatuan.text = "@ ${Utils.getPriceFormat(item.price_foods)}"
         val qtyDouble = item.qty.toDouble()
