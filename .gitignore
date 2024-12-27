@@ -11,5 +11,12 @@
 /build
 /captures
 .externalNativeBuild
-.cxx
+.idea/codeStyles/Project.xml
+build.gradle
+build.gradle
+.idea/codeStyles/Project.xml
+build.gradle
+.idea/misc.xml
+*.aab
+local.properties
 local.properties
