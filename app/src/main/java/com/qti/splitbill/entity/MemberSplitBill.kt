@@ -14,5 +14,7 @@ data class MemberSplitBill(
     val isPajak: Boolean,
     val pajak: Double = 0.0,
     @TypeConverters(FoodConverter::class)
-    val list_foods: List<Foods>
+    val list_foods: List<Foods>,
+    val isBayar: Boolean,
+    val isViewer: Boolean
 )
