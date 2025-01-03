@@ -1,12 +1,10 @@
 package com.qti.splitbill.helper
 
 import android.graphics.Bitmap
-import android.util.Log
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.Text
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
-import com.qti.splitbill.entity.ParsedItem
 
 class TextRecognitionHandler {
 
@@ -16,7 +14,7 @@ class TextRecognitionHandler {
 
         recognizer.process(image)
             .addOnSuccessListener { visionText ->
-                val result = processTextByRows(visionText)
+                val result = processTextByRowsAndMerge(visionText)
                 callback(result)
             }
             .addOnFailureListener { e ->
@@ -25,12 +23,12 @@ class TextRecognitionHandler {
             }
     }
 
-    private fun processTextByRows(result: Text): List<String> {
+    private fun processTextByRowsAndMerge(result: Text): List<String> {
         val lines = result.textBlocks.flatMap { it.lines }
         val dynamicThreshold = calculateDynamicThreshold(lines)
         val rows = groupByRows(lines, dynamicThreshold)
 
-        return rows.map { mergeLinesByRow(it) }
+        return mergeHorizontallyAndVertically(rows)
     }
 
     private fun calculateDynamicThreshold(lines: List<Text.Line>): Int {
@@ -63,6 +61,42 @@ class TextRecognitionHandler {
             }
         }
         return rows
+    }
+
+    private fun mergeHorizontallyAndVertically(rows: List<List<Text.Line>>): List<String> {
+        val mergedLines = mutableListOf<String>()
+        val pricePattern = Regex(".*\\d+[.,]?\\d*.*") // Pola untuk mendeteksi harga
+        var currentLine = ""
+
+        for (row in rows) {
+            val mergedRowText = mergeLinesByRow(row)
+
+            if (mergedRowText.matches(pricePattern)) {
+                // Jika harga ditemukan secara horizontal, tambahkan langsung
+                mergedLines.add(mergedRowText)
+                currentLine = ""
+            } else {
+                // Jika tidak ada harga, tambahkan ke baris saat ini untuk vertikal
+                if (currentLine.isEmpty()) {
+                    currentLine = mergedRowText
+                } else {
+                    currentLine += " $mergedRowText"
+                }
+
+                // Cek jika ada harga dalam gabungan vertikal
+                if (currentLine.matches(pricePattern)) {
+                    mergedLines.add(currentLine)
+                    currentLine = ""
+                }
+            }
+        }
+
+        // Tambahkan baris terakhir jika belum ditambahkan
+        if (currentLine.isNotEmpty()) {
+            mergedLines.add(currentLine)
+        }
+
+        return mergedLines
     }
 
     private fun mergeLinesByRow(row: List<Text.Line>): String {
